@@ -1,0 +1,25 @@
+header {
+  background-color: black; // Set the background color to black
+  position: absolute;
+  top: 5px;
+  left: 5%;
+  width: 500px;
+
+  height: 500px;
+  z-index: -1;
+
+  &:hover {
+  background-image: url("/public/img/testerRoom.webp");
+
+    background-color: transparent; // Remove the background color on hover
+    display: block; // Display the content inside header on hover
+  }
+}
+header > * {
+  display: none; // Hide the content inside header
+
+  &:hover {
+    display: block; // Display the content inside header on hover
+  }
+
+}

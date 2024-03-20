@@ -56,20 +56,3 @@ select {
     scroll-behavior: auto !important;
   }
 }
-:root {
-  --color-primary: #801f0e;
-  --color-primary-alt: #0e6107;
-  --color-secondary: #58a80d;
-  --color-background: #2b2c2c;
-  --color-text: #46241e;
-  --color-light: #fff;
-  --color-anchor: #801f0e;
-  --font-family: "Baloo 2", sans-serif;
-  --font-weight-strong: 500;
-  --font-size-h1: 6rem;
-  --font-size-h2: 3rem;
-  --font-size-h3: 2rem;
-  --font-size-h4: 1.35rem;
-  --font-size-text: 1.15rem;
-  --border-radius: 8px;
-}

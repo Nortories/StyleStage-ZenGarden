@@ -1,0 +1,22 @@
+body{
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 5px solid rgb(218, 197, 13);
+}
+body > *{
+    display: grid;
+
+
+    border: 5px solid rgb(8, 107, 21);
+    padding: 1em;
+    margin: 1em;
+}
+
+.container{
+    display: grid;
+
+    border: 5px solid rgb(14, 202, 202);
+    padding: 1em;
+    margin: 1em;
+}
