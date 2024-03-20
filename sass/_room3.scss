@@ -1,10 +1,11 @@
-nav {
-    background-color: rgb(0, 255, 128); // Set the background color to black
-    position: relative;
-    top: 5px;
-    left: 530px;
+main {
+    background-color: rgb(255, 145, 0); // Set the background color to black
+    position: absolute;
+    top: 510px;
+    left: 25px;
     width: 500px;
-  border: 5px solid black;
+    border: 5px solid black;
+  
     height: 500px;
     z-index: -1;
   
@@ -15,7 +16,7 @@ nav {
       display: block; // Display the content inside header on hover
     }
   }
-  nav > * {
+  main > * {
     display: none; // Hide the content inside header
   
     &:hover {

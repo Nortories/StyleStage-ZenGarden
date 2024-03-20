@@ -56,3 +56,45 @@ select {
     scroll-behavior: auto !important;
   }
 }
+body {
+  margin-top: 5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 5px solid rgb(218, 197, 13);
+}
+
+body > * {
+  display: grid;
+  border: 5px solid rgb(8, 107, 21);
+  padding: 1em;
+  margin: 1em;
+}
+
+.container {
+  display: grid;
+  border: 5px solid rgb(14, 202, 202);
+  padding: 1em;
+  margin: 1em;
+}
+
+header {
+  background-color: black;
+  position: absolute;
+  top: 5px;
+  left: 5%;
+  width: 500px;
+  height: 500px;
+  z-index: -1;
+}
+header:hover {
+  background-image: url("/public/img/testerRoom.webp");
+  background-color: transparent;
+  display: block;
+}
+
+header > * {
+  display: none;
+}
+header > *:hover {
+  display: block;
+}
