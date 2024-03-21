@@ -1,0 +1,111 @@
+header {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.9
+  ); // Set the background color to black with 50% opacity
+  position: relative;
+  top: 5px;
+  left: 25px;
+  margin-right: 2em;
+  border: 5px solid black;
+
+  width: 500px;
+
+  height: 500px;
+
+  &:hover {
+    background-image: url("/public/img/room1.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent; // Remove the background color on hover
+    display: block; // Display the content inside header on hover
+  }
+}
+// header > * {
+//   opacity: 0;
+//   &:hover {
+//     opacity: 1;
+//     display: block; // Display the content inside header on hover
+//     position: relative; // Set position to relative
+//   }
+header > div:first-child h1 {
+  position: absolute;
+  background-color: bisque;
+  top: 60px;
+  left: 277px;
+
+  width: 40px;
+  height: 30px;
+  opacity: 0.1;
+
+  overflow: hidden;
+  &:hover {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    cursor: crosshair;
+  }
+}
+
+header > div:first-child h2 {
+  position: absolute;
+  background-image: url("/public/img/vause.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 150px;
+  left: 430px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  overflow: hidden;
+  &:hover {
+    opacity: 1;
+    width: 300px;
+    height: auto;
+    overflow: visible;
+    cursor: crosshair;
+  }
+}
+header > div:first-child p {
+  position: absolute;
+  top: 150px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  overflow: hidden;
+  &:hover {
+    opacity: 1;
+    width: 300px;
+    height: auto;
+    overflow: visible;
+    cursor: crosshair;
+    background-color:aquamarine;
+  }
+}
+header > div:first-child a {
+  position: absolute;
+  background-image: url("/public/img/vause.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 215px;
+  left: 285px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.1;
+  overflow: hidden;
+
+  &:hover {
+    opacity: 1;
+    width: 300px;
+    height: auto;
+    overflow: visible;
+    cursor: crosshair;
+  }
+}
