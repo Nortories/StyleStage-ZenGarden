@@ -1,7 +1,58 @@
+:root {
+  --clr-background: #3f3535;
+  --page-width:1070px;
+  --Rm-size: 500px;
+  --Rm-size: 500px;
+  --Rm1-top-pos: 150px;
+  --Rm1-left-pos: 20px;
+  --Rm2-top-pos: 150px;
+  --Rm2-left-pos: 530px;
+  --Rm3-top-pos: 655px;
+  --Rm3-left-pos: 25px;
+  --Rm4-top-pos: 655px;
+  --Rm4-left-pos: 530px;
+  --Rm5-top-pos: 1160px;
+  --Rm5-left-pos: 25px;
+  --Rm6-top-pos: 1160px;
+  --Rm6-left-pos: 530px;
+  --page-height: 1700px;
+}
+
+@media (max-width: 1070px) {
+  :root {
+    --clr-background: #db1010;
+    --page-width: 100%;
+    --Rm-size: 500px;
+    --Rm1-top-pos: 150px;
+    --Rm1-left-pos: 25%;
+    --Rm2-top-pos: 650px;
+    --Rm2-left-pos: 25%;
+    --Rm3-top-pos: 1160px;
+    --Rm3-left-pos: 25%;
+    --Rm4-top-pos: 1670px;
+    --Rm4-left-pos: 25%;
+    --Rm5-top-pos: 2180px;
+    --Rm5-left-pos: 25%;
+    --Rm6-top-pos: 2690px;
+    --Rm6-left-pos: 25%;
+    --page-height: 2690px;
+  }
+}
+html {
+  height: var(--page-height);
+  width: var(--page-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
-  position: absolute;
-  height: 100%;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  color: white;
   width: 100%;
+  height: 100%;
+  background-color: var(--clr-background);
+  font-size: 1.2em;
 }
 
 .skip-link {
@@ -17,12 +68,11 @@ body {
 header {
   background-color: rgba(0, 0, 0, 0.9);
   position: absolute;
-  top: 150px;
-  left: 25px;
-  margin-right: 2em;
+  top: var(--Rm1-top-pos);
+  left: var(--Rm1-left-pos);
+  width: var(--Rm-size);
+  height: var(--Rm-size);
   border: 5px solid black;
-  width: 500px;
-  height: 500px;
 }
 header:hover {
   background-image: url("/img/room1.webp");
@@ -114,11 +164,11 @@ header > div:first-child a:hover {
 nav {
   background-color: #00ff80;
   position: absolute;
-  top: 150px;
-  left: 530px;
-  width: 500px;
+  top: var(--Rm2-top-pos);
+  left: var(--Rm2-left-pos);
+  width: var(--Rm-size);
+  height: var(--Rm-size);
   border: 5px solid black;
-  height: 500px;
 }
 nav:hover {
   background-image: url("/img/testerRoom.webp");
@@ -136,11 +186,11 @@ nav > *:hover {
 main {
   background-color: #ff9100;
   position: absolute;
-  top: 655px;
-  left: 25px;
-  width: 500px;
+  top: var(--Rm3-top-pos);
+  left: var(--Rm3-left-pos);
+  width: var(--Rm-size);
+  height: var(--Rm-size);
   border: 5px solid black;
-  height: 500px;
 }
 main:hover {
   background-image: url("/img/testerRoom.webp");
@@ -158,11 +208,11 @@ main > *:hover {
 aside.profile {
   background-color: #0004ff;
   position: absolute;
-  top: 655px;
-  left: 530px;
-  width: 500px;
+  top: var(--Rm4-top-pos);
+  left: var(--Rm4-left-pos);
+  width: var(--Rm-size);
+  height: var(--Rm-size);
   border: 5px solid black;
-  height: 500px;
 }
 aside.profile:hover {
   background-image: url("/img/testerRoom.webp");
@@ -180,11 +230,11 @@ aside.profile > *:hover {
 aside#styles {
   background-color: #ea00ff;
   position: absolute;
-  top: 1160px;
-  left: 25px;
-  width: 500px;
+  top: var(--Rm5-top-pos);
+  left: var(--Rm5-left-pos);
+  width: var(--Rm-size);
+  height: var(--Rm-size);
   border: 5px solid black;
-  height: 500px;
 }
 aside#styles:hover {
   background-image: url("/img/testerRoom.webp");
@@ -202,12 +252,12 @@ aside#styles > *:hover {
 footer {
   background-color: #00ff4c;
   position: absolute;
-  top: 1160px;
-  left: 530px;
-  width: 500px;
+  top: var(--Rm6-top-pos);
+  left: var(--Rm6-left-pos);
+  width: var(--Rm-size);
+  height: var(--Rm-size);
   border: 5px solid black;
   margin-bottom: 2em;
-  height: 500px;
 }
 footer:hover {
   background-image: url("/img/testerRoom.webp");

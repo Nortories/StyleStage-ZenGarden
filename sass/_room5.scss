@@ -1,12 +1,11 @@
 aside#styles {
   background-color: rgb(234, 0, 255); // Set the background color to black
   position: absolute;
-  top: 1160px;
-  left: 25px;
-  width: 500px;
+  top: var(--Rm5-top-pos);
+  left: var(--Rm5-left-pos);
+  width: var(--Rm-size);
+  height: var(--Rm-size);
   border: 5px solid black;
-
-  height: 500px;
 
   &:hover {
     background-image: url("/img/testerRoom.webp");

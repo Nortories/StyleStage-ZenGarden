@@ -1,3 +1,4 @@
+
 header {
   background-color: rgba(
     0,
@@ -6,13 +7,12 @@ header {
     0.9
   ); // Set the background color to black with 50% opacity
   position: absolute;
-  top: 150px;
-  left: 25px;
-  margin-right: 2em;
-  border: 5px solid black;
+  top: var(--Rm1-top-pos);
+  left: var(--Rm1-left-pos);
 
-  width: 500px;
-  height: 500px;
+  width: var(--Rm-size);
+  height: var(--Rm-size);
+  border: 5px solid black;
 
   &:hover {
     background-image: url("/img/room1.webp");
