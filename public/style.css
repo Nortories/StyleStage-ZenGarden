@@ -1,6 +1,7 @@
 :root {
   --clr-background: #3f3535;
   --page-width:1070px;
+  --page-height: 1700px;
   --Rm-size: 500px;
   --Rm-size: 500px;
   --Rm1-top-pos: 150px;
@@ -15,7 +16,6 @@
   --Rm5-left-pos: 25px;
   --Rm6-top-pos: 1160px;
   --Rm6-left-pos: 530px;
-  --page-height: 1700px;
 }
 
 @media (max-width: 1070px) {
@@ -43,6 +43,10 @@ html {
   width: var(--page-width);
   margin-left: auto;
   margin-right: auto;
+}
+
+html:hover {
+  cursor: url("/img/pointer.png"), auto;
 }
 
 body {
@@ -74,7 +78,7 @@ header {
   height: var(--Rm-size);
   border: 5px solid black;
 }
-header:hover {
+header:hover:not(h1) {
   background-image: url("/img/room1.webp");
   background-position: center;
   background-repeat: no-repeat;
@@ -83,34 +87,16 @@ header:hover {
   display: block;
 }
 
-header > div:first-child h1 {
-  position: absolute;
-  background-color: bisque;
-  top: 60px;
-  left: 277px;
-  width: 40px;
-  height: 30px;
-  opacity: 0.1;
-  overflow: hidden;
-}
-header > div:first-child h1:hover {
-  opacity: 1;
-  width: auto;
-  height: auto;
-  overflow: visible;
-  cursor: crosshair;
-}
-
 header > div:first-child h2 {
   position: absolute;
-  background-image: url("/public/img/vause.png");
+  background-image: url("/img/vause.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   top: 150px;
   left: 430px;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   opacity: 0.5;
   overflow: hidden;
 }
@@ -142,7 +128,7 @@ header > div:first-child p:hover {
 
 header > div:first-child a {
   position: absolute;
-  background-image: url("/public/img/vause.png");
+  background-image: url("/img/vause.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -270,4 +256,51 @@ footer > * {
 }
 footer > *:hover {
   display: block;
+}
+
+@keyframes zigzag {
+  0% {
+    transform: translate(0, 100vh);
+    /* Start from the bottom */
+  }
+  25% {
+    transform: translate(100vw, 75vh);
+    /* Move right and up */
+  }
+  50% {
+    transform: translate(-20vw, 50vh);
+    /* Move left and up */
+  }
+  75% {
+    transform: translate(100vw, 25vh);
+    /* Move right and up */
+  }
+  90% {
+    transform: translate(0, 0);
+    /* Reach the top */
+  }
+  100% {
+    transform: translate(0, 100vh);
+    /* Start from the bottom */
+  }
+}
+header > div:first-child h1 {
+  background-image: url("/img/ghostNoEye.png");
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  width: 225px;
+  height: 150px;
+  opacity: 0.25;
+  animation: zigzag 10s infinite;
+  /* Adjust duration as needed */
+  position: fixed;
+  /* Use fixed or absolute positioning */
+  z-index: 9999;
+}
+header > div:first-child h1:hover {
+  opacity: 1;
+  overflow: visible;
+  cursor: crosshair;
 }

@@ -1,0 +1,41 @@
+@keyframes zigzag {
+    0% {
+      transform: translate(0, 100vh); /* Start from the bottom */
+    }
+    25% {
+      transform: translate(100vw, 75vh); /* Move right and up */
+    }
+    50% {
+      transform: translate(-20vw, 50vh); /* Move left and up */
+    }
+    75% {
+      transform: translate(100vw, 25vh); /* Move right and up */
+    }
+    90% {
+      transform: translate(0, 0); /* Reach the top */
+    }
+    100% {
+      transform: translate(0, 100vh); /* Start from the bottom */
+    }
+  }
+  
+     
+header > div:first-child h1 {
+        background-image: url("/img/ghostNoEye.png");
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        width: 225px;
+        height: 150px;
+        opacity: .25;
+
+
+        animation: zigzag 10s infinite; /* Adjust duration as needed */
+        position: fixed; /* Use fixed or absolute positioning */
+        z-index: 9999;
+        &:hover {
+            opacity: 1;
+            overflow: visible;
+            cursor: crosshair;
+          }
+    }
+  

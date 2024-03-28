@@ -14,7 +14,7 @@ header {
   height: var(--Rm-size);
   border: 5px solid black;
 
-  &:hover {
+  &:hover:not(h1) {
     background-image: url("/img/room1.webp");
     background-position: center;
     background-repeat: no-repeat;
@@ -30,36 +30,36 @@ header {
 //     display: block; // Display the content inside header on hover
 //     position: relative; // Set position to relative
 //   }
-header > div:first-child h1 {
-  position: absolute;
-  background-color: bisque;
-  top: 60px;
-  left: 277px;
+// header > div:first-child h1 {
+//   position: absolute;
+//   background-color: bisque;
+//   top: 60px;
+//   left: 277px;
 
-  width: 40px;
-  height: 30px;
-  opacity: 0.1;
+//   width: 40px;
+//   height: 30px;
+//   opacity: 0.1;
 
-  overflow: hidden;
-  &:hover {
-    opacity: 1;
-    width: auto;
-    height: auto;
-    overflow: visible;
-    cursor: crosshair;
-  }
-}
+//   overflow: hidden;
+//   &:hover {
+//     opacity: 1;
+//     width: auto;
+//     height: auto;
+//     overflow: visible;
+//     cursor: crosshair;
+//   }
+// }
 
 header > div:first-child h2 {
   position: absolute;
-  background-image: url("/public/img/vause.png");
+  background-image: url("/img/vause.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   top: 150px;
   left: 430px;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   opacity: 0.5;
   overflow: hidden;
   &:hover {
@@ -89,7 +89,7 @@ header > div:first-child p {
 }
 header > div:first-child a {
   position: absolute;
-  background-image: url("/public/img/vause.png");
+  background-image: url("/img/vause.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

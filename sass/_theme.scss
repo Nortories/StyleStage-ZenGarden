@@ -1,6 +1,7 @@
 :root {
     --clr-background: #3f3535;
     --page-width:1070px;
+    --page-height: 1700px;
     --Rm-size: 500px;
     --Rm-size: 500px;
     --Rm1-top-pos: 150px;
@@ -15,7 +16,6 @@
     --Rm5-left-pos: 25px;
     --Rm6-top-pos: 1160px;
     --Rm6-left-pos: 530px;
-    --page-height: 1700px;
 
 }
 @media (max-width: 1070px) {
@@ -45,6 +45,9 @@ html {
     margin-right: auto;
 }
 
+html:hover {
+    cursor:url("/img/pointer.png"), auto;
+}
 body {
     position: relative;
     font-family: 'Roboto', sans-serif;
