@@ -5,18 +5,17 @@ header {
     0,
     0.9
   ); // Set the background color to black with 50% opacity
-  position: relative;
-  top: 5px;
+  position: absolute;
+  top: 150px;
   left: 25px;
   margin-right: 2em;
   border: 5px solid black;
 
   width: 500px;
-
   height: 500px;
 
   &:hover {
-    background-image: url("/public/img/room1.webp");
+    background-image: url("/img/room1.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -85,7 +84,7 @@ header > div:first-child p {
     height: auto;
     overflow: visible;
     cursor: crosshair;
-    background-color:aquamarine;
+    background-color: aquamarine;
   }
 }
 header > div:first-child a {

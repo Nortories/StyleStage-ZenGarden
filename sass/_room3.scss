@@ -1,27 +1,24 @@
 main {
-    background-color: rgb(255, 145, 0); // Set the background color to black
-    position: absolute;
-    top: 510px;
-    left: 25px;
-    width: 500px;
-    border: 5px solid black;
-  
-    height: 500px;
-    z-index: -1;
-  
-    &:hover {
-    background-image: url("/public/img/testerRoom.webp");
-  
-      background-color: transparent; // Remove the background color on hover
-      display: block; // Display the content inside header on hover
-    }
+  background-color: rgb(255, 145, 0); // Set the background color to black
+  position: absolute;
+  top: 655px;
+  left: 25px;
+  width: 500px;
+  border: 5px solid black;
+
+  height: 500px;
+
+  &:hover {
+    background-image: url("/img/testerRoom.webp");
+
+    background-color: transparent; // Remove the background color on hover
+    display: block; // Display the content inside header on hover
   }
-  main > * {
-    display: none; // Hide the content inside header
-  
-    &:hover {
-      display: block; // Display the content inside header on hover
-    }
-  
+}
+main > * {
+  display: none; // Hide the content inside header
+
+  &:hover {
+    display: block; // Display the content inside header on hover
   }
-  
+}

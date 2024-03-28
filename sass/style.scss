@@ -2,6 +2,8 @@
 // Overrides just need placed prior to the theme import
 // For example:
 // $color-primary: #3a0;
+@import "background";
+@import "roof";
 @import "room1";
 @import "room2";
 @import "room3";

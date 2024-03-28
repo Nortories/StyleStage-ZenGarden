@@ -1,100 +1,223 @@
-/*
- * [Modified] Modern CSS Reset
- * @link https://github.com/hankchizljaw/modern-css-reset
-*/
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-html {
-  overflow-x: hidden;
-}
-
-/* Set core body defaults */
 body {
-  min-height: 100vh;
-  font-size: 100%;
-  line-height: 1.5;
-  text-rendering: optimizeSpeed;
-  overflow-x: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
-/* Make images easier to work with */
-img {
-  display: block;
-  max-width: 100%;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-body {
-  margin-top: 5em;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 5px solid rgb(218, 197, 13);
-}
-
-body > * {
-  display: grid;
-  border: 5px solid rgb(8, 107, 21);
-  padding: 1em;
-  margin: 1em;
-}
-
-.container {
-  display: grid;
-  border: 5px solid rgb(14, 202, 202);
-  padding: 1em;
-  margin: 1em;
+.skip-link {
+  position: absolute;
+  height: 150px;
+  width: 1070px;
+  background-image: url("/img/roof.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 header {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
   position: absolute;
-  top: 5px;
-  left: 5%;
+  top: 150px;
+  left: 25px;
+  margin-right: 2em;
+  border: 5px solid black;
   width: 500px;
   height: 500px;
-  z-index: -1;
 }
 header:hover {
-  background-image: url("/public/img/testerRoom.webp");
+  background-image: url("/img/room1.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: transparent;
   display: block;
 }
 
-header > * {
+header > div:first-child h1 {
+  position: absolute;
+  background-color: bisque;
+  top: 60px;
+  left: 277px;
+  width: 40px;
+  height: 30px;
+  opacity: 0.1;
+  overflow: hidden;
+}
+header > div:first-child h1:hover {
+  opacity: 1;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  cursor: crosshair;
+}
+
+header > div:first-child h2 {
+  position: absolute;
+  background-image: url("/public/img/vause.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 150px;
+  left: 430px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  overflow: hidden;
+}
+header > div:first-child h2:hover {
+  opacity: 1;
+  width: 300px;
+  height: auto;
+  overflow: visible;
+  cursor: crosshair;
+}
+
+header > div:first-child p {
+  position: absolute;
+  top: 150px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  overflow: hidden;
+}
+header > div:first-child p:hover {
+  opacity: 1;
+  width: 300px;
+  height: auto;
+  overflow: visible;
+  cursor: crosshair;
+  background-color: aquamarine;
+}
+
+header > div:first-child a {
+  position: absolute;
+  background-image: url("/public/img/vause.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 215px;
+  left: 285px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.1;
+  overflow: hidden;
+}
+header > div:first-child a:hover {
+  opacity: 1;
+  width: 300px;
+  height: auto;
+  overflow: visible;
+  cursor: crosshair;
+}
+
+nav {
+  background-color: #00ff80;
+  position: absolute;
+  top: 150px;
+  left: 530px;
+  width: 500px;
+  border: 5px solid black;
+  height: 500px;
+}
+nav:hover {
+  background-image: url("/img/testerRoom.webp");
+  background-color: transparent;
+  display: block;
+}
+
+nav > * {
   display: none;
 }
-header > *:hover {
+nav > *:hover {
+  display: block;
+}
+
+main {
+  background-color: #ff9100;
+  position: absolute;
+  top: 655px;
+  left: 25px;
+  width: 500px;
+  border: 5px solid black;
+  height: 500px;
+}
+main:hover {
+  background-image: url("/img/testerRoom.webp");
+  background-color: transparent;
+  display: block;
+}
+
+main > * {
+  display: none;
+}
+main > *:hover {
+  display: block;
+}
+
+aside.profile {
+  background-color: #0004ff;
+  position: absolute;
+  top: 655px;
+  left: 530px;
+  width: 500px;
+  border: 5px solid black;
+  height: 500px;
+}
+aside.profile:hover {
+  background-image: url("/img/testerRoom.webp");
+  background-color: transparent;
+  display: block;
+}
+
+aside.profile > * {
+  display: none;
+}
+aside.profile > *:hover {
+  display: block;
+}
+
+aside#styles {
+  background-color: #ea00ff;
+  position: absolute;
+  top: 1160px;
+  left: 25px;
+  width: 500px;
+  border: 5px solid black;
+  height: 500px;
+}
+aside#styles:hover {
+  background-image: url("/img/testerRoom.webp");
+  background-color: transparent;
+  display: block;
+}
+
+aside#styles > * {
+  display: none;
+}
+aside#styles > *:hover {
+  display: block;
+}
+
+footer {
+  background-color: #00ff4c;
+  position: absolute;
+  top: 1160px;
+  left: 530px;
+  width: 500px;
+  border: 5px solid black;
+  margin-bottom: 2em;
+  height: 500px;
+}
+footer:hover {
+  background-image: url("/img/testerRoom.webp");
+  background-color: transparent;
+  display: block;
+}
+
+footer > * {
+  display: none;
+}
+footer > *:hover {
   display: block;
 }
