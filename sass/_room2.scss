@@ -1,14 +1,18 @@
 nav {
-  background-color: rgb(0, 255, 128); // Set the background color to black
+  background-image: url("/img/testerRoom.webp");
+  opacity: 0.1; // Set the opacity of the background image
   position: absolute;
   top: var(--Rm2-top-pos);
   left: var(--Rm2-left-pos);
   width: var(--Rm-size);
   height: var(--Rm-size);
   border: 5px solid black;
+  z-index: 1;
+
 
   &:hover {
-    background-image: url("/img/testerRoom.webp");
+    opacity: .8; // Set the opacity of the background image to 1 on hover
+
 
     background-color: transparent; // Remove the background color on hover
     display: block; // Display the content inside header on hover

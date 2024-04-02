@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap");
 :root {
-  --clr-background: #3f3535;
+  --clr-background: #000000;
   --page-width:1070px;
   --page-height: 1700px;
   --Rm-size: 500px;
@@ -51,12 +52,12 @@ html:hover {
 
 body {
   position: relative;
-  font-family: "Roboto", sans-serif;
-  color: white;
+  font-family: "Rubik Wet Paint", system-ui;
+  color: greenyellow;
   width: 100%;
   height: 100%;
   background-color: var(--clr-background);
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .skip-link {
@@ -97,11 +98,11 @@ header > div:first-child h2 {
   left: 430px;
   width: 50px;
   height: 50px;
-  opacity: 0.5;
+  opacity: 0.1;
   overflow: hidden;
 }
 header > div:first-child h2:hover {
-  opacity: 1;
+  opacity: 0.8;
   width: 300px;
   height: auto;
   overflow: visible;
@@ -148,16 +149,18 @@ header > div:first-child a:hover {
 }
 
 nav {
-  background-color: #00ff80;
+  background-image: url("/img/testerRoom.webp");
+  opacity: 0.1;
   position: absolute;
   top: var(--Rm2-top-pos);
   left: var(--Rm2-left-pos);
   width: var(--Rm-size);
   height: var(--Rm-size);
   border: 5px solid black;
+  z-index: 1;
 }
 nav:hover {
-  background-image: url("/img/testerRoom.webp");
+  opacity: 0.8;
   background-color: transparent;
   display: block;
 }
@@ -170,29 +173,110 @@ nav > *:hover {
 }
 
 main {
-  background-color: #ff9100;
+  background-image: url("/img/testerRoom.webp");
+  opacity: 0.1;
   position: absolute;
   top: var(--Rm3-top-pos);
   left: var(--Rm3-left-pos);
   width: var(--Rm-size);
   height: var(--Rm-size);
   border: 5px solid black;
+  z-index: 1;
 }
 main:hover {
-  background-image: url("/img/testerRoom.webp");
+  opacity: 0.8;
   background-color: transparent;
   display: block;
 }
 
-main > * {
-  display: none;
-}
 main > *:hover {
   display: block;
 }
 
+#about {
+  position: absolute;
+  background-image: url("/img/vause.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#about:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2em;
+  background-image: none;
+  opacity: 0.99;
+  width: 90vb;
+  height: 1000px;
+  z-index: 9999;
+  overflow: visible;
+  cursor: crosshair;
+  transition: width 0.5s ease;
+}
+
+#guidelines {
+  position: absolute;
+  background-image: url("/img/vause.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#guidelines:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2em;
+  background-image: none;
+  opacity: 0.99;
+  width: 90vb;
+  height: 1000px;
+  z-index: 9999;
+  overflow: visible;
+  cursor: crosshair;
+  transition: width 0.5s ease;
+}
+
+#contribute {
+  position: absolute;
+  background-image: url("/img/vause.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#contribute:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2em;
+  background-image: none;
+  opacity: 0.99;
+  width: 90vb;
+  height: 1000px;
+  z-index: 9999;
+  overflow: visible;
+  cursor: crosshair;
+  transition: width 0.5s ease;
+}
+
 aside.profile {
-  background-color: #0004ff;
+  background-image: url("/img/rm4.webp");
+  opacity: 0.1;
   position: absolute;
   top: var(--Rm4-top-pos);
   left: var(--Rm4-left-pos);
@@ -201,20 +285,42 @@ aside.profile {
   border: 5px solid black;
 }
 aside.profile:hover {
-  background-image: url("/img/testerRoom.webp");
+  opacity: 0.8;
   background-color: transparent;
   display: block;
 }
 
 aside.profile > * {
-  display: none;
+  position: absolute;
+  background-image: url("/img/vause.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+  overflow: hidden;
+  border-radius: 10px;
 }
 aside.profile > *:hover {
-  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2em;
+  background-image: none;
+  opacity: 0.99;
+  width: 90vb;
+  height: 1000px;
+  z-index: 9999;
+  overflow: visible;
+  cursor: crosshair;
+  transition: width 0.5s ease;
 }
 
 aside#styles {
-  background-color: #ea00ff;
+  background-image: url("/img/testerRoom.webp");
+  opacity: 0.1;
+  z-index: 0;
   position: absolute;
   top: var(--Rm5-top-pos);
   left: var(--Rm5-left-pos);
@@ -223,7 +329,7 @@ aside#styles {
   border: 5px solid black;
 }
 aside#styles:hover {
-  background-image: url("/img/testerRoom.webp");
+  opacity: 0.8;
   background-color: transparent;
   display: block;
 }
@@ -236,7 +342,10 @@ aside#styles > *:hover {
 }
 
 footer {
-  background-color: #00ff4c;
+  background-image: url("/img/testerRoom.webp");
+  opacity: 0.1;
+  background-color: var(--clr-hideRoom);
+  z-index: 0;
   position: absolute;
   top: var(--Rm6-top-pos);
   left: var(--Rm6-left-pos);
@@ -246,7 +355,7 @@ footer {
   margin-bottom: 2em;
 }
 footer:hover {
-  background-image: url("/img/testerRoom.webp");
+  opacity: 0.8;
   background-color: transparent;
   display: block;
 }
@@ -290,12 +399,12 @@ header > div:first-child h1 {
   /* Center the background image */
   background-repeat: no-repeat;
   /* Do not repeat the image */
-  width: 225px;
+  width: 325px;
   height: 150px;
-  opacity: 0.25;
-  animation: zigzag 10s infinite;
+  content: none;
+  animation: zigzag 30s infinite;
   /* Adjust duration as needed */
-  position: fixed;
+  position: absolute;
   /* Use fixed or absolute positioning */
   z-index: 9999;
 }

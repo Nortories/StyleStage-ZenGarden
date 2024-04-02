@@ -1,5 +1,9 @@
 footer {
-  background-color: rgb(0, 255, 76); // Set the background color to black
+  background-image: url("/img/testerRoom.webp");
+  opacity: 0.1; // Set the opacity of the background image
+  background-color: var(--clr-hideRoom); // Set the background color to black
+  z-index: 0;
+  
   position: absolute;
   top: var(--Rm6-top-pos);
   left: var(--Rm6-left-pos);
@@ -9,8 +13,7 @@ footer {
   margin-bottom: 2em;
 
   &:hover {
-    background-image: url("/img/testerRoom.webp");
-
+    opacity: .8; // Set the opacity of the background image to 1 on hover
     background-color: transparent; // Remove the background color on hover
     display: block; // Display the content inside header on hover
   }

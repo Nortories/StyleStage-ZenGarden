@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
 :root {
-    --clr-background: #3f3535;
+   
+    --clr-background: #000000;
     --page-width:1070px;
     --page-height: 1700px;
     --Rm-size: 500px;
@@ -16,6 +19,7 @@
     --Rm5-left-pos: 25px;
     --Rm6-top-pos: 1160px;
     --Rm6-left-pos: 530px;
+    
 
 }
 @media (max-width: 1070px) {
@@ -49,12 +53,13 @@ html:hover {
     cursor:url("/img/pointer.png"), auto;
 }
 body {
+
     position: relative;
-    font-family: 'Roboto', sans-serif;
-    color: white;
+    font-family: "Rubik Wet Paint", system-ui;
+    color: greenyellow;
     width: 100%;
     height: 100%;
     background-color: var(--clr-background);
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 

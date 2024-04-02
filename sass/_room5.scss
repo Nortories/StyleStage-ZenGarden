@@ -1,5 +1,7 @@
 aside#styles {
-  background-color: rgb(234, 0, 255); // Set the background color to black
+  background-image: url("/img/testerRoom.webp");
+  opacity: 0.1; // Set the opacity of the background image
+  z-index: 0;
   position: absolute;
   top: var(--Rm5-top-pos);
   left: var(--Rm5-left-pos);
@@ -8,7 +10,8 @@ aside#styles {
   border: 5px solid black;
 
   &:hover {
-    background-image: url("/img/testerRoom.webp");
+    opacity: .8; // Set the opacity of the background image to 1 on hover
+
 
     background-color: transparent; // Remove the background color on hover
     display: block; // Display the content inside header on hover
