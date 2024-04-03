@@ -1,6 +1,7 @@
 footer {
-  background-image: url("/img/testerRoom.webp");
-  opacity: 0.1; // Set the opacity of the background image
+  background-image: url("/img/rm6.webp");
+  background-size: 100% 100%;
+  opacity: var(--fog-hide);
   background-color: var(--clr-hideRoom); // Set the background color to black
   z-index: 0;
   

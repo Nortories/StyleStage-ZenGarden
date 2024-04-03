@@ -7,15 +7,20 @@ header {
     0.9
   ); // Set the background color to black with 50% opacity
   position: absolute;
+  background-image: url("/img/rm1.webp");
+  background-size: 100% 100%;
+  opacity: var(--fog-hide);
+
   top: var(--Rm1-top-pos);
   left: var(--Rm1-left-pos);
-
+  
   width: var(--Rm-size);
   height: var(--Rm-size);
   border: 5px solid black;
-
+  
   &:hover:not(h1) {
-    background-image: url("/img/room1.webp");
+    
+    opacity: 0.8; // Set the opacity of the background image
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -50,62 +55,33 @@ header {
 //   }
 // }
 
-header > div:first-child h2 {
-  position: absolute;
-  background-image: url("/img/vause.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: 150px;
-  left: 430px;
-  width: 50px;
-  height: 50px;
-  opacity: 0.1;
-  overflow: hidden;
-  &:hover {
-    opacity: .8; 
-
-    width: 300px;
-    height: auto;
-    overflow: visible;
-    cursor: crosshair;
-  }
-}
-header > div:first-child p {
-  position: absolute;
-  top: 150px;
-  left: 10px;
-  width: 20px;
-  height: 20px;
-  opacity: 0.5;
-  overflow: hidden;
-  &:hover {
+header > * {
+    position: absolute;
+    background-image: url("/img/portaitShift.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 125px;
+    left:60px;
+    width: 50px;
+    height: 50px;
+    padding-top: 2em;
     opacity: 1;
-    width: 300px;
-    height: auto;
-    overflow: visible;
-    cursor: crosshair;
-    background-color: aquamarine;
+    overflow: hidden;
+    border-radius: 10px; // Add rounded borders
+  
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8); // Transparent black background color
+      padding: 2em;
+      background-image:none;
+      opacity: .99; // Set the opacity of the background image to 1 on hover
+      width: 90vb; // Make the box 80% wide
+      height: 1000px;
+      z-index: 9999; // Set the z-index to 9999
+      overflow: visible;
+      cursor: crosshair;
+      transition: width 0.5s ease; // Add smooth animation
+    }
   }
-}
-header > div:first-child a {
-  position: absolute;
-  background-image: url("/img/vause.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: 215px;
-  left: 285px;
-  width: 20px;
-  height: 20px;
-  opacity: 0.1;
-  overflow: hidden;
 
-  &:hover {
-    opacity: 1;
-    width: 300px;
-    height: auto;
-    overflow: visible;
-    cursor: crosshair;
-  }
-}

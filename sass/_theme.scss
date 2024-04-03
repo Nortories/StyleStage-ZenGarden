@@ -19,12 +19,13 @@
     --Rm5-left-pos: 25px;
     --Rm6-top-pos: 1160px;
     --Rm6-left-pos: 530px;
-    
+    --fog-hide: 0.25;
+    --for-show: 0.8;
 
 }
 @media (max-width: 1070px) {
     :root {
-        --clr-background: #665151;
+        --clr-background: #000000;
         --page-width: 100%;
         --Rm-size: 500px;
         --Rm1-top-pos: 150px;
@@ -62,4 +63,21 @@ body {
     background-color: var(--clr-background);
     font-size: 1.4em;
 }
-
+h1 {
+    font-size: 2.5em; /* Increase the font size */
+    letter-spacing: 1px; /* Add spacing between letters */
+}
+h2 {
+    margin-top: 50px; /* Add spacing on top of the h1 text */
+    
+    font-size: 1.8em; /* Increase the font size */
+    letter-spacing: 2px; /* Add spacing between letters */
+}
+h3 {
+    font-size: 1.5em; /* Increase the font size */
+    letter-spacing: 3px; /* Add spacing between letters */
+}
+h4 {
+    font-size: 2em; /* Increase the font size */
+    letter-spacing: 4px; /* Add spacing between letters */
+}

@@ -1,6 +1,8 @@
 nav {
-  background-image: url("/img/testerRoom.webp");
-  opacity: 0.1; // Set the opacity of the background image
+  background-image: url("/img/rm2.webp");
+  background-size: 100% 100%;
+
+  opacity: var(--fog-hide);
   position: absolute;
   top: var(--Rm2-top-pos);
   left: var(--Rm2-left-pos);
@@ -19,9 +21,40 @@ nav {
   }
 }
 nav > * {
-  display: none; // Hide the content inside header
+
+  position: absolute;
+  background-image: url("/img/bathtub.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 30px;
+  left: 90px;
+  width: 100px;
+  height: 100px;
+  padding-top: 2em;
+  opacity: 1;
+  overflow: hidden;
+  border-radius: 10px; // Add rounded borders
+  li{
+    margin-top: 500px;
+}
 
   &:hover {
-    display: block; // Display the content inside header on hover
+    background-color: rgba(0, 0, 0, 0.8); // Transparent black background color
+    padding: 2em;
+    background-image:none;
+    opacity: .99; // Set the opacity of the background image to 1 on hover
+    width: 400px; // Make the box 80% wide
+    height: 450px;
+    z-index: 9999; // Set the z-index to 9999
+    overflow: visible;
+    cursor: crosshair;
+    transition: width 0.5s ease; // Add smooth animation
+    li{
+      margin-top: 45px;
+      padding-left: 2em;
+  }
+  
   }
 }

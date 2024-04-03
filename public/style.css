@@ -17,11 +17,13 @@
   --Rm5-left-pos: 25px;
   --Rm6-top-pos: 1160px;
   --Rm6-left-pos: 530px;
+  --fog-hide: 0.25;
+  --for-show: 0.8;
 }
 
 @media (max-width: 1070px) {
   :root {
-    --clr-background: #665151;
+    --clr-background: #000000;
     --page-width: 100%;
     --Rm-size: 500px;
     --Rm1-top-pos: 150px;
@@ -60,6 +62,36 @@ body {
   font-size: 1.4em;
 }
 
+h1 {
+  font-size: 2.5em;
+  /* Increase the font size */
+  letter-spacing: 1px;
+  /* Add spacing between letters */
+}
+
+h2 {
+  margin-top: 50px;
+  /* Add spacing on top of the h1 text */
+  font-size: 1.8em;
+  /* Increase the font size */
+  letter-spacing: 2px;
+  /* Add spacing between letters */
+}
+
+h3 {
+  font-size: 1.5em;
+  /* Increase the font size */
+  letter-spacing: 3px;
+  /* Add spacing between letters */
+}
+
+h4 {
+  font-size: 2em;
+  /* Increase the font size */
+  letter-spacing: 4px;
+  /* Add spacing between letters */
+}
+
 .skip-link {
   position: absolute;
   height: 150px;
@@ -73,6 +105,9 @@ body {
 header {
   background-color: rgba(0, 0, 0, 0.9);
   position: absolute;
+  background-image: url("/img/rm1.webp");
+  background-size: 100% 100%;
+  opacity: var(--fog-hide);
   top: var(--Rm1-top-pos);
   left: var(--Rm1-left-pos);
   width: var(--Rm-size);
@@ -80,7 +115,7 @@ header {
   border: 5px solid black;
 }
 header:hover:not(h1) {
-  background-image: url("/img/room1.webp");
+  opacity: 0.8;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -88,69 +123,39 @@ header:hover:not(h1) {
   display: block;
 }
 
-header > div:first-child h2 {
+header > * {
   position: absolute;
-  background-image: url("/img/vause.png");
+  background-image: url("/img/portaitShift.png");
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 150px;
-  left: 430px;
+  top: 125px;
+  left: 60px;
   width: 50px;
   height: 50px;
-  opacity: 0.1;
-  overflow: hidden;
-}
-header > div:first-child h2:hover {
-  opacity: 0.8;
-  width: 300px;
-  height: auto;
-  overflow: visible;
-  cursor: crosshair;
-}
-
-header > div:first-child p {
-  position: absolute;
-  top: 150px;
-  left: 10px;
-  width: 20px;
-  height: 20px;
-  opacity: 0.5;
-  overflow: hidden;
-}
-header > div:first-child p:hover {
+  padding-top: 2em;
   opacity: 1;
-  width: 300px;
-  height: auto;
-  overflow: visible;
-  cursor: crosshair;
-  background-color: aquamarine;
-}
-
-header > div:first-child a {
-  position: absolute;
-  background-image: url("/img/vause.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: 215px;
-  left: 285px;
-  width: 20px;
-  height: 20px;
-  opacity: 0.1;
   overflow: hidden;
+  border-radius: 10px;
 }
-header > div:first-child a:hover {
-  opacity: 1;
-  width: 300px;
-  height: auto;
+header > *:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2em;
+  background-image: none;
+  opacity: 0.99;
+  width: 90vb;
+  height: 1000px;
+  z-index: 9999;
   overflow: visible;
   cursor: crosshair;
+  transition: width 0.5s ease;
 }
 
 nav {
-  background-image: url("/img/testerRoom.webp");
-  opacity: 0.1;
+  background-image: url("/img/rm2.webp");
+  background-size: 100% 100%;
+  opacity: var(--fog-hide);
   position: absolute;
   top: var(--Rm2-top-pos);
   left: var(--Rm2-left-pos);
@@ -166,15 +171,45 @@ nav:hover {
 }
 
 nav > * {
-  display: none;
+  position: absolute;
+  background-image: url("/img/bathtub.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 30px;
+  left: 90px;
+  width: 100px;
+  height: 100px;
+  padding-top: 2em;
+  opacity: 1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+nav > * li {
+  margin-top: 500px;
 }
 nav > *:hover {
-  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2em;
+  background-image: none;
+  opacity: 0.99;
+  width: 400px;
+  height: 450px;
+  z-index: 9999;
+  overflow: visible;
+  cursor: crosshair;
+  transition: width 0.5s ease;
+}
+nav > *:hover li {
+  margin-top: 45px;
+  padding-left: 2em;
 }
 
 main {
-  background-image: url("/img/testerRoom.webp");
-  opacity: 0.1;
+  background-image: url("/img/rm3.webp");
+  background-size: 100% 100%;
+  opacity: var(--fog-hide);
   position: absolute;
   top: var(--Rm3-top-pos);
   left: var(--Rm3-left-pos);
@@ -184,7 +219,7 @@ main {
   z-index: 1;
 }
 main:hover {
-  opacity: 0.8;
+  opacity: var(--for-show);
   background-color: transparent;
   display: block;
 }
@@ -195,15 +230,15 @@ main > *:hover {
 
 #about {
   position: absolute;
-  background-image: url("/img/vause.png");
+  background-image: url("/img/creepyLittleGuy.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 20px;
-  left: 20px;
+  top: 351px;
+  left: 119px;
   width: 50px;
   height: 50px;
-  opacity: 0.5;
+  opacity: 1;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -222,12 +257,12 @@ main > *:hover {
 
 #guidelines {
   position: absolute;
-  background-image: url("/img/vause.png");
+  background-image: url("/img/lightBulb.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 20px;
-  right: 20px;
+  top: 135px;
+  left: 215px;
   width: 50px;
   height: 50px;
   opacity: 0.5;
@@ -249,15 +284,17 @@ main > *:hover {
 
 #contribute {
   position: absolute;
-  background-image: url("/img/vause.png");
+  background-image: url("/img/doll.png");
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  bottom: 20px;
-  left: 20px;
+  top: 300px;
+  left: 280px;
   width: 50px;
   height: 50px;
-  opacity: 0.5;
+  padding-top: 2em;
+  opacity: 1;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -276,7 +313,8 @@ main > *:hover {
 
 aside.profile {
   background-image: url("/img/rm4.webp");
-  opacity: 0.1;
+  background-size: 100% 100%;
+  opacity: var(--fog-hide);
   position: absolute;
   top: var(--Rm4-top-pos);
   left: var(--Rm4-left-pos);
@@ -296,8 +334,8 @@ aside.profile > * {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 50%;
-  left: 50%;
+  top: 52%;
+  left: 43%;
   width: 50px;
   height: 50px;
   opacity: 0.5;
@@ -318,8 +356,9 @@ aside.profile > *:hover {
 }
 
 aside#styles {
-  background-image: url("/img/testerRoom.webp");
-  opacity: 0.1;
+  background-image: url("/img/rm5.webp");
+  background-size: 100% 100%;
+  opacity: var(--fog-hide);
   z-index: 0;
   position: absolute;
   top: var(--Rm5-top-pos);
@@ -342,8 +381,9 @@ aside#styles > *:hover {
 }
 
 footer {
-  background-image: url("/img/testerRoom.webp");
-  opacity: 0.1;
+  background-image: url("/img/rm6.webp");
+  background-size: 100% 100%;
+  opacity: var(--fog-hide);
   background-color: var(--clr-hideRoom);
   z-index: 0;
   position: absolute;
@@ -394,15 +434,16 @@ footer > *:hover {
   }
 }
 header > div:first-child h1 {
+  position: fixed;
   background-image: url("/img/ghostNoEye.png");
   background-position: center;
   /* Center the background image */
   background-repeat: no-repeat;
   /* Do not repeat the image */
-  width: 325px;
-  height: 150px;
-  content: none;
-  animation: zigzag 30s infinite;
+  width: 400px;
+  height: 250px;
+  opacity: 0.6;
+  animation: zigzag 35s infinite;
   /* Adjust duration as needed */
   position: absolute;
   /* Use fixed or absolute positioning */

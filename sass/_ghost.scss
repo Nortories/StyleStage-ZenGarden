@@ -21,15 +21,15 @@
   
      
 header > div:first-child h1 {
+        position: fixed;
         background-image: url("/img/ghostNoEye.png");
         background-position: center; /* Center the background image */
         background-repeat: no-repeat; /* Do not repeat the image */
-        width: 325px;
-        height: 150px;
-        content: none;
+        width: 400px;
+        height: 250px;
+        opacity: 0.6;
 
-
-        animation: zigzag 30s infinite; /* Adjust duration as needed */
+        animation: zigzag 35s infinite; /* Adjust duration as needed */
         position: absolute; /* Use fixed or absolute positioning */
         z-index: 9999;
         &:hover {

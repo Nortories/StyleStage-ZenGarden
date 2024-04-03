@@ -1,6 +1,7 @@
 aside.profile {
   background-image: url("/img/rm4.webp");
-  opacity: 0.1; // Set the opacity of the background image
+  background-size: 100% 100%;
+  opacity: var(--fog-hide);
   position: absolute;
   top: var(--Rm4-top-pos);
   left: var(--Rm4-left-pos);
@@ -23,8 +24,8 @@ aside.profile > * {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 50%;
-  left: 50%;
+  top: 52%;
+  left: 43%;
   width: 50px;
   height: 50px;
   opacity: 0.5;

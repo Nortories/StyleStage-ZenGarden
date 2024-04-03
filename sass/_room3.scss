@@ -1,6 +1,7 @@
 main {
-  background-image: url("/img/testerRoom.webp");
-  opacity: 0.1; // Set the opacity of the background image
+  background-image: url("/img/rm3.webp");
+  background-size: 100% 100%;
+  opacity: var(--fog-hide); // Set the opacity of the background image
   position: absolute;
   top: var(--Rm3-top-pos);
   left: var(--Rm3-left-pos);
@@ -10,7 +11,7 @@ main {
   z-index: 1;
   
   &:hover {
-    opacity: .8; // Set the opacity of the background image to 1 on hover
+    opacity: var(--for-show); // Set the opacity of the background image to 1 on hover
 
 
     background-color: transparent; // Remove the background color on hover
@@ -26,15 +27,15 @@ main > * {
 
 #about {
   position: absolute;
-  background-image: url("/img/vause.png");
+  background-image: url("/img/creepyLittleGuy.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 20px;
-  left: 20px;
+  top: 351px;
+  left: 119px;
   width: 50px;
   height: 50px;
-  opacity: 0.5;
+  opacity: 1;
   overflow: hidden;
   border-radius: 10px; // Add rounded borders
 
@@ -54,12 +55,12 @@ main > * {
 }
 #guidelines{
   position: absolute;
-  background-image: url("/img/vause.png");
+  background-image: url("/img/lightBulb.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 20px;
-  right: 20px;
+  top: 135px;
+  left: 215px;
   width: 50px;
   height: 50px;
   opacity: 0.5;
@@ -82,15 +83,17 @@ main > * {
 }
 #contribute{
   position: absolute;
-  background-image: url("/img/vause.png");
+  background-image: url("/img/doll.png");
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  bottom: 20px;
-  left: 20px;
+  top: 300px;
+  left: 280px;
   width: 50px;
   height: 50px;
-  opacity: 0.5;
+  padding-top: 2em;
+  opacity: 1;
   overflow: hidden;
   border-radius: 10px; // Add rounded borders
 
