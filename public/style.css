@@ -94,12 +94,16 @@ h4 {
 
 .skip-link {
   position: absolute;
-  height: 150px;
-  width: 1070px;
-  background-image: url("/img/roof.png");
+  top: -460px;
+  height: 125%;
+  width: 110%;
+  left: -50px;
+  z-index: -1;
+  opacity: 0.4;
+  background-image: url("/img/HauntedHouse.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
 }
 
 header {
