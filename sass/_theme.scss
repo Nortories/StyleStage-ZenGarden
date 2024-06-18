@@ -1,71 +1,83 @@
-$color-primary: #801f0e !default;
-$color-primary-alt: #0e6107 !default;
-$color-secondary: #58a80d !default;
-$color-background: #3d4949 !default;
-*{
-  background-color: $color-background;
-}
-$brand-colors: (
-  primary: $color-primary,
-  primary-alt: $color-primary-alt,
-  secondary: $color-secondary,
-) !default;
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
 
-$color-body: scale-color(
-  $color-primary,
-  $lightness: -30%,
-  $saturation: -50%
-) !default;
-$color-gray: mix(#767676, $color-body, 70%) !default;
-
-$colors: map-merge(
-  $brand-colors,
-  (
-    background: $color-background,
-    text: $color-body,
-    light: #fff,
-  )
-);
-
-@function color($key) {
-  @return map-get($colors, $key);
-}
-
-@function svgColor($color) {
-  @return "%23" + str-slice("#{color($color)}", 2, -1);
-}
-
-$link-color: color(primary) !default;
-$border-radius: 8px !default;
-
-$font-weight-strong: 500 !default;
-$font-size-h1: 6rem !default;
-$font-size-h2: 3rem !default;
-$font-size-h3: 2rem !default;
-$font-size-h4: 1.35rem !default;
-$font-size-text: 1.15rem !default;
-
-$font-sizes: (
-  h1: $font-size-h1,
-  h2: $font-size-h2,
-  h3: $font-size-h3,
-  h4: $font-size-h4,
-  text: $font-size-text,
-);
-
-// stylelint-disable
 :root {
-  @each $key, $color in $colors {
-    --color-#{$key}: #{$color};
-  }
+   
+    --clr-background: #000000;
+    --page-width:1070px;
+    --page-height: 1700px;
+    --Rm-size: 500px;
+    --Rm-size: 500px;
+    --Rm1-top-pos: 150px;
+    --Rm1-left-pos: 25px;
+    --Rm2-top-pos: 150px;
+    --Rm2-left-pos: 530px;
+    --Rm3-top-pos: 655px;
+    --Rm3-left-pos: 25px;
+    --Rm4-top-pos: 655px;
+    --Rm4-left-pos: 530px;
+    --Rm5-top-pos: 1160px;
+    --Rm5-left-pos: 25px;
+    --Rm6-top-pos: 1160px;
+    --Rm6-left-pos: 530px;
+    --fog-hide: 0.25;
+    --for-show: 0.8;
 
-  --color-anchor: #{$link-color};
-  --font-family: "Baloo 2", sans-serif;
-  --font-weight-strong: #{$font-weight-strong};
+}
+@media (max-width: 1070px) {
+    :root {
+        --clr-background: #000000;
+        --page-width: 100%;
+        --Rm-size: 500px;
+        --Rm1-top-pos: 150px;
+        --Rm1-left-pos: 25%;
+        --Rm2-top-pos: 650px;
+        --Rm2-left-pos: 25%;
+        --Rm3-top-pos: 1160px;
+        --Rm3-left-pos: 25%;
+        --Rm4-top-pos: 1670px;
+        --Rm4-left-pos: 25%;
+        --Rm5-top-pos: 2180px;
+        --Rm5-left-pos: 25%;
+        --Rm6-top-pos: 2690px;
+        --Rm6-left-pos: 25%;
+        --page-height: 2690px;
+    }
+}
+html {
+    height: var(--page-height);
+    width: var(--page-width);
+    margin-left: auto;
+    margin-right: auto;
+}
 
-  @each $key, $size in $font-sizes {
-    --font-size-#{$key}: #{$size};
-  }
+html:hover {
+    cursor:url("/img/pointer.png"), auto;
+}
+body {
 
-  --border-radius: #{$border-radius};
+    position: relative;
+    font-family: "Rubik Wet Paint", system-ui;
+    color: greenyellow;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-background);
+    font-size: 1.4em;
+}
+h1 {
+    font-size: 2.5em; /* Increase the font size */
+    letter-spacing: 1px; /* Add spacing between letters */
+}
+h2 {
+    margin-top: 50px; /* Add spacing on top of the h1 text */
+    
+    font-size: 1.8em; /* Increase the font size */
+    letter-spacing: 2px; /* Add spacing between letters */
+}
+h3 {
+    font-size: 1.5em; /* Increase the font size */
+    letter-spacing: 3px; /* Add spacing between letters */
+}
+h4 {
+    font-size: 2em; /* Increase the font size */
+    letter-spacing: 4px; /* Add spacing between letters */
 }
